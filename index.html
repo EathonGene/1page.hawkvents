@@ -26,22 +26,20 @@
 
     <style>
         :root {
-            --primary-blue: #0056b3; /* 調整為更清爽的通風科技藍 */
-            --accent-gold: #00d4ff; /* 改為水藍色強調色 */
+            --primary-blue: #0056b3;
+            --accent-gold: #00d4ff;
             --light-bg: #f8fbff;
         }
 
         html { scroll-behavior: smooth; }
         body { font-family: 'Noto Sans TC', sans-serif; color: #333; line-height: 1.8; overflow-x: hidden; }
 
-        /* 導覽列 Logo 設定 */
         .navbar { background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 10px 0; }
         .navbar-brand { font-weight: 700; color: var(--primary-blue) !important; font-size: 1.4rem; display: flex; align-items: center; }
         .navbar-brand img { height: 40px; margin-right: 12px; border-radius: 4px; }
         .nav-link { color: #333 !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
         .nav-link:hover { color: var(--primary-blue) !important; }
 
-        /* 首屏 Hero */
         .hero {
             background: linear-gradient(rgba(0, 40, 80, 0.7), rgba(0, 40, 80, 0.7)), 
                         url('./bckp.jpg') center/cover;
@@ -50,12 +48,10 @@
         }
         .hero h1 { font-size: 3.2rem; font-weight: 700; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
 
-        /* 通用設定 */
         section { padding: 90px 0; }
         .section-title { text-align: center; margin-bottom: 50px; font-weight: 700; color: var(--primary-blue); }
         .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent-gold); margin: 15px auto; }
 
-        /* 圖片展示區塊 */
         .intro-gallery img {
             width: 100%;
             height: 250px;
@@ -66,7 +62,6 @@
         }
         .intro-gallery img:hover { transform: scale(1.03); }
 
-        /* 產品卡片 */
         .product-card {
             background: white; border-radius: 12px; overflow: hidden; margin-bottom: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08); transition: 0.3s; height: 100%;
@@ -78,7 +73,6 @@
         .product-info { padding: 25px; }
         .product-info i { font-size: 1.5rem; color: var(--primary-blue); margin-bottom: 10px; display: block; }
 
-        /* 動畫 */
         .img-box { border-radius: 15px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
         .img-box img { width: 100%; height: auto; display: block; }
         .reveal { opacity: 0; transition: all 1s ease-out; }
@@ -87,7 +81,6 @@
         .reveal-bottom { transform: translateY(40px); }
         .reveal.active { opacity: 1; transform: translateX(0) translateY(0); }
 
-        /* 聯絡資訊 */
         .contact-section { background: #002b5c; color: white; padding: 80px 0; }
         .contact-item { margin-bottom: 18px; font-size: 1.1rem; display: flex; align-items: flex-start; }
         .contact-item i { color: var(--accent-gold); margin-right: 15px; font-size: 1.3rem; margin-top: 5px; }
@@ -100,7 +93,6 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRLH4SSS"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -127,12 +119,11 @@
             <h1 class="display-4 fw-bold">高效降溫解決方案 ‧ 專利連桿百葉窗</h1>
             <p class="lead mt-3">鷹牌通風 — 精準氣流規劃，打造節能舒適的工業與畜牧空間</p>
             <a href="#contact" class="btn btn-info btn-lg mt-4 fw-bold px-5 shadow text-white">聯繫現場勘查</a>
-            <p style="text-align:center">
-                <a href="https://lin.ee/Rz8rUw3" class="btn mt-4 fw-bold px-5">
+            <p class="mt-4">
+                <a href="https://lin.ee/Rz8rUw3" target="_blank">
                     <img alt="鷹牌通風 LINE 詢價" src="https://i.imgur.com/hKMTTYt.png" style="height:40px; width:120px" />
                 </a>
             </p>
-            
         </div>
     </header>
 
@@ -248,7 +239,7 @@
                 </div>
                 <div class="col-lg-7 reveal reveal-right">
                     <div class="map-box shadow">
-                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://maps.google.com/maps?q=彰化縣福興鄉南興街93-36號&z=15&output=embed"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.16523992015!2d120.4471536762319!3d23.91917957855913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469493f61993439%3A0xe54d63251c881c9e!2z6be554mM6YCa6aKo5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1700000000000!5m2!1szh-TW!2stw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -264,7 +255,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // 設定當前年份
         document.getElementById("current-year").textContent = new Date().getFullYear();
+        
+        // 滾動動畫邏輯
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -277,6 +271,8 @@
         }
         window.addEventListener("scroll", reveal);
         window.onload = reveal;
+
+        // 行動裝置選單自動關閉
         const navLinks = document.querySelectorAll('.nav-link');
         const menuToggle = document.getElementById('navbarNav');
         const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false});
